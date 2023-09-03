@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    height: 100vh;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide overflow to prevent horizontal scrollbars */
+    position: relative; /* Required for pseudo-element */
+    background-color: #3498db; /* Initial background color */
+
+    /* Animation property applied to the pseudo-element */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #3498db, #ffffff); /* Initial gradient */
+    background-size: 100% 200%;
+    animation: colorChange 4s linear infinite; /* Animation property */
+}
+
+@keyframes colorChange {
+    0% {
+        background-position: 0% 0%; /* Start from the top */
+    }
+    100% {
+        background-position: 0% 100%; /* Move to the bottom */
+    }
+}
