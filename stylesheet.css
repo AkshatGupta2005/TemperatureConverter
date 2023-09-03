@@ -6,32 +6,105 @@ html{
     height: 100vh;
 }
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Hide overflow to prevent horizontal scrollbars */
-    position: relative; /* Required for pseudo-element */
-    background-color: #3498db; /* Initial background color */
-
-    /* Animation property applied to the pseudo-element */
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #3498db, #ffffff); /* Initial gradient */
+    overflow: hidden;
+    background: linear-gradient(to bottom, #272829 0%, #61677A 100%); /* Initial gradient */
     background-size: 100% 200%;
-    animation: colorChange 4s linear infinite; /* Animation property */
+    animation: colorChange 10s linear infinite; /* Animation property */
 }
 
 @keyframes colorChange {
-    0% {
-        background-position: 0% 0%; /* Start from the top */
+    0%, 100% {
+        background-position: 0% 0%; /* Start and end with red at the top */
     }
-    100% {
-        background-position: 0% 100%; /* Move to the bottom */
+    50% {
+        background-position: 0% 100%; /* Blue at the bottom */
+    }
+}
+body{
+    color: #D8D9DA;
+    font-size: 3em;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+}
+.container{
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.inputElements{
+    margin: 30px;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: #272829;
+    color: #D8D9DA;
+}
+.selectElement{
+    width: 200px;
+    margin-right: 60px;
+}
+.inputItems{
+    display: flex;
+    justify-content: center;
+}
+.inputElements option{
+    width: 100px;
+    background-color: #494953;
+    padding: 5px;
+    border-radius: 0 0 10px 10px ;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+button{
+    margin: 30px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 17px;
+    background-color: #FFF6E0;
+    color: #61677A;
+    border-color: #272829;
+}
+button:hover {
+    background-color: #272829; /* Change background color on hover */
+    color: #61677A; /* Change text color on hover */
+    transform: scale(1.15); /* Scale up the button on hover */
+    transition: background-color 0.5s ease-in-out, color 0.2s ease-in-out, transform 0.3s ease-in-out;
+  }
+.output{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: #FFE5E1;   
+}
+footer{
+    text-align: center;
+    font-size: 25px;
+}
+a{
+    color: #F0DE36;
+}
+@media (max-width: 530px){
+    .inputItems{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+@media (max-width: 350px){
+    body{
+        background-color: #272829;
+        animation: none;
+        height: 100vh;
+        font-size: 20px;
     }
 }
