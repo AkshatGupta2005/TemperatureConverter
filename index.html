@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Temperature Converter</title>
-    <link rel="stylesheet" href="./stylesheet.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  </head>
+  <body>
     <div class="container">
-        <div class="input">
-            <label for="selectUnit">Select Temperature Converter:</label>
-            <select id="selectUnit" name="temperature">
-                <option value="celToFere">Celsius to Fahrenheit</option>
-                <option value="fereToCel">Fahrenheit to Celsius</option>
-                <option value="celToKelvin">Celsius to Kelvin</option>
-                <option value="kelvinToCel">Kelvin to Celsius</option>
-                <option value="fereToKelvin">Fahrenheit to Kelvin</option>
-                <option value="kelvinToFere">Kelvin to Fahrenheit</option>
+      <div class="input">
+        <label for="selectUnit">Temperature Converter</label>
+        <div class="inputItems">
+          <div class="selectElement">
+            <select id="selectUnit" name="temperature" class="inputElements">
+              <option disabled selected value="">Select Converter</option>
+              <option value="celToFere">Celsius to Fahrenheit</option>
+              <option value="fereToCel">Fahrenheit to Celsius</option>
+              <option value="celToKelvin">Celsius to Kelvin</option>
+              <option value="kelvinToCel">Kelvin to Celsius</option>
+              <option value="fereToKelvin">Fahrenheit to Kelvin</option>
+              <option value="kelvinToFere">Kelvin to Fahrenheit</option>
             </select>
-            <input type="number" id="temperatureInput">
-            <button onclick="convertTemperature()">Convert</button>
+          </div>
+          <input
+            type="number"
+            id="temperatureInput"
+            placeholder="Enter Temperature"
+            class="inputElements"
+          />
+        </div>
+        <div class="button">
+          <button onclick="convertTemperature()">Convert</button>
         </div>
         <div class="output">
-            <p><span id="result"></span></p>
+        <p><span id="result"></span></p>
         </div>
+        </div>
+      </div>
     </div>
     <script src="./script.js"></script>
-</body>
+  </body>
+  <footer>
+    <p>Made By <a href="https://github.com/AkshatGupta2005">Akshat Gupta</a></p>
+  </footer>
 </html>
+
